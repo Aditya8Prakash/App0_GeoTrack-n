@@ -1,0 +1,30 @@
+[
+    {
+        "name": "SatView (Esri WorldImagery)",
+        "type": "satellite",
+        "time": "day",
+        "api": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+        "attribution": "&copy; Esri &amp; GIS Community"
+    },
+    {
+        "name": "SatView (Mapbox) Day",
+        "type": "satellite",
+        "time": "day",
+        "api": "https://api.mapbox.com/styles/v1/mapbox/satellite-v9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYWRpdHlhLXByYWthc2giLCJhIjoiY2toaXk0emcxMWd6MjJ5bzQ1d3llOG9lYiJ9.TP_domm-fG2YvZPszt0DSA",
+        "attribution": "&copy; <a href='https://www.mapbox.com'>Mapbox</a>"
+    },
+    {
+        "name": "SatView (Stadia Maps)",
+        "type": "satellite",
+        "time": "day",
+        "api": "https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.png",
+        "attribution": "&copy; CNES, Airbus DS | <a href='https://www.stadiamaps.com/'>Stadia</a>"
+    },
+    {
+        "name": "PaperView (OpenStreetMap)",
+        "type": "paper",
+        "time": "any",
+        "api": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        "attribution": "&copy; <a href='http://www.openstreetmap.org'>OSM</a>"
+    }
+]

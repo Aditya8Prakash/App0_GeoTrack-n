@@ -1,0 +1,48 @@
+Day and night mecha,
+-- night maps,
+---------- location data usage
+/done/---------- multi tiling, custom tiles
+-- night lights,
+-------- night data integration
+
+/done/ Customizable Map Themes
+/done/ Customizable Crosshair Themes
+/done/ Improve Crosshair Animation
+/done/ Improve Crosshair Visibility
+UnF Crosshair file
+
+/done/ FIX attribution
+/done/ FIX mapstyles
+
+Impliment geoData and geoFencing
+/done/ use reverse geoCoding
+
+/done/ start the firebase auth system
+connect, test with a bali ka bakra (sample User)
+FIX FIREBASE AUTH PROBLEM, IMPLIMENT UI
+
+
+/done/ FIX MODULAR CODE UPDRADE ISSUE
+
+#######**********
+weather mecha
+/done/-- realtime clouds integration
+--------- 2 level of clouds
+/done/------------------ clouds lev 1 disappear at zoom 5-1
+------------------ clouds lev 2 disappear at zoom 8-1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TO DO FAR FUTURE 
+https://youtube.com/shorts/G3MLkPSZxCk?si=WtTCK2lMt5XxUKym

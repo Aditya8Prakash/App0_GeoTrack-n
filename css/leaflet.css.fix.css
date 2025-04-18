@@ -1,0 +1,62 @@
+/* Theme variables */
+:root {
+  --zoom-control-bg-color: rgba(255, 255, 255, 0.15);
+  --zoom-control-border-color: rgba(255, 255, 255, 0.2);
+  --zoom-control-hover-bg-color: rgba(255, 255, 255, 0.25);
+  --zoom-control-icon-color: var(--text-primary);
+  --zoom-control-border-radius: 4px;
+  --zoom-control-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --zoom-control-font-size: 18px;
+}
+
+/* Zoom control container */
+.leaflet-control-zoom {
+  background: transparent !important;
+  border-radius: var(--zoom-control-border-radius) !important;
+}
+
+/* Common styles for zoom buttons */
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+  background: var(--zoom-control-bg-color) !important;
+  color: var(--zoom-control-icon-color) !important;
+  border: 1px solid var(--zoom-control-border-color) !important;
+  box-shadow: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: var(--zoom-control-font-size) !important;
+  transition: var(--transition-standard) !important;
+}
+
+/* Specific border radius for each button */
+.leaflet-control-zoom-in {
+  border-radius: var(--zoom-control-border-radius) var(--zoom-control-border-radius) 0 0 !important;
+}
+
+.leaflet-control-zoom-out {
+  border-radius: 0 0 var(--zoom-control-border-radius) var(--zoom-control-border-radius) !important;
+  border-top: none !important;
+}
+
+/* Button icons */
+.leaflet-control-zoom-in::before,
+.leaflet-control-zoom-out::before {
+  color: var(--zoom-control-icon-color) !important;
+  font-size: var(--zoom-control-font-size) !important;
+}
+
+/* Hover and active states */
+.leaflet-control-zoom-in:hover,
+.leaflet-control-zoom-out:hover {
+  background: var(--zoom-control-hover-bg-color) !important;
+  cursor: pointer !important;
+  transform: translateY(-1px) !important;
+  box-shadow: var(--zoom-control-box-shadow) !important;
+}
+
+.leaflet-control-zoom-in:active,
+.leaflet-control-zoom-out:active {
+  transform: translateY(0) !important;
+  box-shadow: none !important;
+}

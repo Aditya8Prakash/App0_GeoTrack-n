@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous" />
+    
+    <link rel="stylesheet" href="leaflet.css.fix.css">
+
+    <!-- JavaScript Libraries -->
+    <!-- <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.min.js"></script> -->
+</head>
+<body>
+
+    <!-- Map Container -->
+    <div id="map">
+
+        
+        <div id="crosshair"></div>
+        <div id="crosshairx">
+            <div class="center-dot"></div>
+        </div>
+
+        <!-- Debug Layer -->
+        <div id="debug_layer_noanime">
+            <button id="alert"><p></p></button>
+        </div>
+        
+        <!-- One Degree Animation Layer -->
+        <div id="one_deg_anime_layer">
+            <h1 id="worldLevelTextContainer">
+                <span id="worldLevelText"></span>
+            </h1>
+        </div>
+
+        <!-- Additional Animation Layer -->
+        <div id="two_point_five_deg_anime_layer">
+            <div id="display_compulsory_debug_data">
+                <div id="zoom_level"></div>
+                <div id="zoom_altitude"></div>
+                <div id="chunk_loader_status"></div>
+            </div>
+        </div>
+
+        <!-- Two Degree Animation Layer -->
+        <div id="two_deg_anime_layer">
+            <div id="header"></div>
+            <div id="footer"></div>
+            <div class="left_gradient"></div>
+            <div class="right_gradient"></div>
+        </div>
+        
+    </div>
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@joergdietrich/leaflet.terminator"></script>
+
+
+    
+    <script type="module" src="./script.js"></script>
+    <script type="module" src="./location_data.js"></script>
+
+
+    
+</body>
+</html>

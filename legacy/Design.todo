@@ -1,0 +1,19 @@
+Day and night mecha,
+-- night maps,
+---------- location data usage
+---------- multi tiling, custom tiles
+-- night lights,
+-------- night data integration
+
+
+
+
+#######**********
+weather mecha
+/done/-- realtime clouds integration
+--------- 2 level of clouds
+/done/------------------ clouds lev 1 disappear at zoom 5-1
+------------------ clouds lev 2 disappear at zoom 8-1
+
+
+

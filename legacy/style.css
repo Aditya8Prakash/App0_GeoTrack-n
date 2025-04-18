@@ -1,0 +1,194 @@
+/* Global Styles */
+html, body {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif; /* Material UI Font */
+}
+
+/* Map Container */
+#map { 
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #000000 0%, #040B15 25%, #EFEEF4 75%, #ffffff 100%);
+    position: relative;
+}
+
+/* Debug Layer */
+#debug_layer_noanime {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px; /* Rounded corners for Material UI */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Material UI shadow */
+}
+
+/* World Level Text Container */
+#worldLevelTextContainer {
+    position: absolute;
+    top: -1.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+#worldLevelText {
+    color: #ffffff;
+    font-size: 37px;
+    font-weight: 500;
+    font-family: 'Roboto Mono', monospace; /* Material UI Font */
+    letter-spacing: 2px;
+    opacity: 1;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Animation Layers */
+#two_deg_anime_layer {
+    overflow: hidden;
+}
+
+/* Header and Footer with Glass Pane Effect */
+#header,
+#footer {
+    position: absolute;
+    height: 80px;
+    width: 100vw;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(6, 68, 139, 0.808);
+    border: 2px solid rgba(83, 83, 83, 0.4);
+    box-shadow: 0 0px 25px rgba(29, 29, 29, 0.726);
+    opacity: 0.400;
+    transition: opacity 0.5s ease, background 0.5s ease;
+
+}
+
+#header {
+    top: 0;
+}
+
+#footer {
+    bottom: 0;
+}
+
+/* Left and Right Gradient Overlays */
+.left_gradient, .right_gradient {
+    position: absolute;
+    width: 125px;
+    height: 100%;
+    z-index: 998;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent);
+}
+
+.right_gradient {
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.25), transparent);
+}
+
+/* Zoom Level Display */
+.two_point_five_deg_anime_layer {
+    position: absolute;
+    bottom: 1.5%;
+    left: 1.5%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease;
+}
+
+#display_compulsory_debug_data {
+    
+    background-color: rgba(87, 87, 87, 0.247);
+    padding: 7px;
+    border-radius: 4px; /* Rounded corners for Material UI */
+    box-shadow: 0 2px 4px rgb(0, 0, 0,); 
+
+    position: absolute;
+    bottom: 9px;
+    left: 9px;
+    z-index: 1003;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    transition: transform 0.5s ease;
+
+    opacity: 1;
+}
+
+#zoom_level, #chunk_loader_status, #zoom_altitude{
+    z-index: 1004;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400; /* Normal weight for Material UI */
+    font-family: 'Roboto Mono', monospace; /* Material UI Font */
+    letter-spacing: 1px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    margin: -3px
+}
+
+
+
+
+
+
+
+/* Crosshair Container */
+#crosshair, #crosshairx {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 35px;
+    height: 35px;
+    z-index: 1001;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* Circle Crosshair */
+#crosshairx {
+    width: 16px; /* Diameter of the circle */
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.4); /* More transparent white border */
+    border-radius: 50%; /* Makes the element circular */
+    background: none; /* No fill */
+    position: relative;
+    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.2), /* More transparent inner glow */
+                0 0 4px rgba(0, 0, 0, 0.1); /* More transparent outer shadow */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+/* Central Dot */
+#crosshairx .center-dot {
+    position: absolute;
+    width: 4px; /* Diameter of the dot */
+    height: 4px;
+    background: rgba(255, 255, 255, 0.5); /* More transparent white color for the dot */
+    border-radius: 50%; /* Makes the dot circular */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Hover Effect */
+#crosshairx:hover {
+    border-color: rgba(100, 181, 246, 0.5); /* More transparent light blue border on hover */
+    box-shadow: inset 0 0 8px rgba(100, 181, 246, 0.3), /* More transparent inner glow effect */
+                0 0 8px rgba(100, 181, 246, 0.4); /* More transparent outer glow effect */
+}

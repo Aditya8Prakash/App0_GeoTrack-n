@@ -1,0 +1,99 @@
+<!-- working HTML -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/crosshair.css">
+    <link rel="stylesheet" href="./css/auth.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/leaflet.css.fix.css">
+</head>
+<body>
+    <!-- Map Container -->
+    <div id="map">
+        <div id="crosshair" class="crosshair-circle">
+            <div id="centerDot" class="center-dot"></div>
+        </div>
+
+        <!-- One Degree Animation Layer -->
+        <div id="one_deg_anime_layer">
+            <h1 id="worldLevelTextContainer">
+                <span id="worldLevelText"></span>
+            </h1>
+        </div>
+
+        <!-- Additional Animation Layer -->
+        <div id="two_point_five_deg_anime_layer">
+            <div id="display_compulsory_debug_data">
+                <div id="zoom_level"></div>
+                <div id="zoom_altitude"></div>
+                <div id="chunk_loader_status"></div>
+            </div>
+        </div>
+
+        <!-- Two Degree Animation Layer -->
+        <div id="two_deg_anime_layer">
+            <div id="header">
+                <div id="control_panel_layer">
+
+                    <div class="dropdown">
+                        <button class="dropbtn">User</button>
+                        <div class="dropdown-content">
+                            <div class="dropbtn_grp">
+                                <div class="login_form">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">UI</button>
+                        <div class="dropdown-content">
+                            <div class="dropbtn_grp">
+                                <div class="map_style">
+                                    <p>Map styles</p>
+                                </div>
+                            </div>
+                            <div class="dropbtn_grp">
+                                <div class="crosshair_style">
+                                    <p>Crosshair Style</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="footer"></div>
+            <div class="left_gradient"></div>
+            <div class="right_gradient"></div>
+        </div>
+    </div>
+
+    <!-- External Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://unpkg.com/@joergdietrich/leaflet.terminator"></script>
+
+    <!-- Local Scripts -->
+    <script src="./main.js" type="module"></script>
+    
+    <script src="./UI-dopeing.js"></script>
+
+    <script src="./js/auth/login.js"></script>
+    <script src="./js/auth/config.js"></script>
+    <script src="./js/auth/app.js"></script>
+    <script src="./js/auth/auth.js"></script>
+
+</body>
+</html>

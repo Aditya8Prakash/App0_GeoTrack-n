@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Circle (Default)",
+        "styles": {
+            "shape": "circle",
+            "size": "1rem",
+            "border": {
+                "width": "2px",
+                "style": "solid",
+                "color": "rgba(255, 255, 255, 0.4)"
+            },
+            "centerDot": {
+                "size": "0.25rem",
+                "color": "rgba(255, 255, 255, 0.705)"
+            },
+            "boxShadow": "inset 0 0 6px rgba(255, 255, 255, 0.2), 0 0 4px rgba(0, 0, 0, 0.1)",
+            "hoverStyles": {
+                "borderColor": "rgba(100, 181, 246, 0.5)",
+                "boxShadow": "inset 0 0 8px rgba(100, 181, 246, 0.3), 0 0 8px rgba(100, 181, 246, 0.4)"
+            }
+        }
+    },
+    {
+        "name": "Plus",
+        "styles": {
+            "shape": "plus",
+            "size": "1.5rem",
+            "lines": {
+                "width": "2px",
+                "color": "rgba(255, 255, 255, 0.4)"
+            },
+            "centerDot": {
+                "size": "0.25rem",
+                "color": "rgba(255, 255, 255, 0.705)"
+            },
+            "hoverStyles": {
+                "color": "rgba(100, 181, 246, 0.5)",
+                "boxShadow": "0 0 8px rgba(100, 181, 246, 0.4)"
+            }
+        }
+    },
+    {
+        "name": "Cross",
+        "styles": {
+            "shape": "cross",
+            "size": "1.25rem",
+            "lines": {
+                "width": "2px",
+                "color": "rgba(255, 255, 255, 0.4)",
+                "length": "0.625rem"
+            },
+            "centerDot": {
+                "size": "0.25rem",
+                "color": "rgba(255, 255, 255, 0.705)"
+            },
+            "hoverStyles": {
+                "color": "rgba(100, 181, 246, 0.5)",
+                "boxShadow": "0 0 8px rgba(100, 181, 246, 0.4)"
+            }
+        }
+    }
+]

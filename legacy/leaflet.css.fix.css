@@ -1,0 +1,103 @@
+/* Define theme variables */
+:root {
+    --zoom-control-bg-color: rgba(6, 68, 139, 0.5);;
+    --zoom-control-icon-color: white;
+    --zoom-control-border-radius: 5px;
+    --zoom-control-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    --zoom-control-font-size: 18px;
+    --zoom-control-hover-bg-color: rgba(0, 88, 139, 0.3);
+    --zoom-control-active-bg-color: rgba(0, 124, 128, 0.3);
+}
+
+/* Apply theme variables */
+.leaflet-control-zoom {
+    background-color: var(--zoom-control-bg-color) !important;
+    border-radius: var(--zoom-control-border-radius) !important;
+}
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+    background-color: var(--zoom-control-bg-color) !important;
+    color: var(--zoom-control-icon-color) !important;
+    border: none !important;
+
+    border-radius: var(--zoom-control-border-radius) var(--zoom-control-border-radius) 0 0 !important;
+
+    box-shadow: var(--zoom-control-box-shadow) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: var(--zoom-control-font-size) !important;
+}
+
+.leaflet-control-zoom-out{
+    border-radius: 0 0 var(--zoom-control-border-radius) var(--zoom-control-border-radius) !important;
+}
+
+.leaflet-control-zoom-in::before,
+.leaflet-control-zoom-out::before {
+    color: var(--zoom-control-icon-color) !important;
+    font-size: var(--zoom-control-font-size) !important;
+}
+
+.leaflet-control-zoom-in:hover,
+.leaflet-control-zoom-out:hover {
+    background-color: var(--zoom-control-hover-bg-color) !important;
+    cursor: pointer !important;
+}
+
+.leaflet-control-zoom-in:active,
+.leaflet-control-zoom-out:active {
+    background-color: var(--zoom-control-active-bg-color) !important;
+}
+
+.leaflet-zoom-animated {
+    /* cursor: move !important; */
+}
+
+
+
+
+
+/* Leaflet CSS Modification */
+.leaflet-control-zoom {
+    background-color: blue; /* Background color of the zoom control container */
+    border-radius: 5px; /* Optional: adds rounded corners to the zoom control container */
+}
+
+/* Style the zoom-in and zoom-out buttons */
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+    background-color: blue; /* Background color of the buttons */
+    color: white; /* Color of the zoom icons */
+    border: none; /* Remove the border */
+    border-radius: 5px; /* Optional: adds rounded corners to the buttons */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Optional: adds a shadow effect */
+    display: flex; /* Center the icon within the button */
+    align-items: center; /* Center the icon vertically */
+    justify-content: center; /* Center the icon horizontally */
+    font-size: 18px; /* Size of the zoom icons */
+}
+
+/* Change the icon color and size */
+.leaflet-control-zoom-in::before,
+.leaflet-control-zoom-out::before {
+    color: white; /* Color of the zoom icons */
+    font-size: 18px; /* Size of the zoom icons */
+}
+
+/* Optional: Add hover effect */
+.leaflet-control-zoom-in:hover,
+.leaflet-control-zoom-out:hover {
+    background-color: darkblue; /* Change background color on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Optional: Add active effect */
+.leaflet-control-zoom-in:active,
+.leaflet-control-zoom-out:active {
+    background-color: navy; /* Change background color when button is pressed */
+}
+
+
+

@@ -1,0 +1,92 @@
+:root {
+    --crosshair-default-color: rgba(255, 255, 255, 0.829);
+    --crosshair-target-color: rgb(0, 255, 0);
+    --crosshair-shadow: rgba(0, 0, 0, 0.1);
+    --transition-standard: all 0.3s ease;
+}
+
+/* Crosshair Base Styles */
+#crosshair {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1001;
+    transform: translate(-50%, -50%);
+    transition: var(--transition-standard);
+    pointer-events: none;
+}
+
+/* Shared Styles for Dot and Shapes */
+.center-dot,
+.crosshair-circle,
+.crosshair-plus,
+.crosshair-cross {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: var(--transition-standard);
+}
+
+.center-dot {
+    width: 4px;
+    height: 4px;
+    background: var(--crosshair-default-color);
+    border-radius: 50%;
+    box-shadow: 0 0 4px var(--crosshair-shadow);
+    z-index: 100000;
+}
+
+.crosshair-circle,
+.crosshair-plus,
+.crosshair-cross {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--crosshair-default-color);
+    border-radius: 50%;
+}
+
+.crosshair-circle::before,
+.crosshair-circle::after,
+.crosshair-plus::before,
+.crosshair-plus::after,
+.crosshair-cross::before,
+.crosshair-cross::after {
+    content: '';
+    position: absolute;
+    background: var(--crosshair-default-color);
+    top: 50%;
+    left: 50%;
+    transition: var(--transition-standard);
+}
+
+.crosshair-circle::before,
+.crosshair-circle::after {
+    width: 0;
+    height: 0;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.crosshair-plus::before,
+.crosshair-plus::after,
+.crosshair-cross::before,
+.crosshair-cross::after {
+    width: 2px;
+    height: 12px;
+}
+
+.crosshair-plus::before {
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.crosshair-plus::after {
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.crosshair-cross::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.crosshair-cross::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
